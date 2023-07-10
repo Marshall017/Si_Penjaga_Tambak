@@ -25,14 +25,6 @@ class Navbar extends Component {
                         <Foundation name="home" size={30} style={{color: this.props.whichPage === "home" ? "#0E8388" : "#2C3333"}}/>
                         <Text style={{fontSize: 12, fontWeight:"400", color: this.props.whichPage === "home" ? "#0E8388" : "#2C3333"}}>Home</Text>
                     </Pressable>
-                    <Pressable style={styles.itemNavbar} onPress={() => this.props.navigation.replace('search')}>
-                        <Octicons name="search" size={30} style={{color: this.props.whichPage === "search" ? "#0E8388" : "#2C3333"}}/>
-                        <Text style={{fontSize: 12, fontWeight:"400", color:this.props.whichPage === "search" ? "#0E8388" : "#2C3333"}}>Search</Text>
-                    </Pressable>
-                    <Pressable style={styles.itemNavbar} onPress={() => this.props.navigation.replace('ranking')}>
-                        <MaterialIcons name="bar-chart" size={30} style={{color: this.props.whichPage === "ranking" ? "#0E8388" : "#2C3333"}}/>
-                        <Text style={{fontSize: 12, fontWeight:"400", color:this.props.whichPage === "ranking" ? "#0E8388" : "#2C3333"}}>Rank</Text>
-                    </Pressable>
                     <Pressable style={styles.itemNavbar} onPress={() => this.props.navigation.replace('setting')}>
                         <FontAwesome name="gear" size={30} style={{color: this.props.whichPage === "setting" ? "#0E8388" : "#2C3333"}}/>
                         <Text style={{fontSize: 12, fontWeight:"400", color: this.props.whichPage === "setting" ? "#0E8388" : "#2C3333"}}>Setting</Text>
@@ -53,6 +45,7 @@ const styles = StyleSheet.create({
         alignItems : "center",
         justifyContent: 'space-around',
         paddingTop: 8,
+        borderRadius:25
     },
     navbarText:{
         fontStyle: "normal",
