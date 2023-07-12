@@ -10,42 +10,39 @@ const screenWidth = Dimensions.get('window').width;
 
 const alarm = ({ navigation }) => {
     return (
-        <SafeAreaView style={[styles.container, AndroidSafeView.AndroidSafeArea]}>
-          <View style={[{ width: screenWidth }, styles.container]}>
-            <View style={{ position: "absolute", top: 0 }}>
-              <Header headerTitle="   Detail" />
-            </View>
-    
-            <StatusBar style="auto" />
-    
-            <View style={{ position: "absolute", bottom: 0 }}>
-              <Navbar whichPage="home" />
-            </View>
-    
-            <View style={styles.column}>
-              <View style={styles.card}>
-                <Text style={styles.cardValue}> 09 : 41</Text>
-              </View>
-              <View style={[styles.card, styles.lowerCard]}>
-                <Text style={styles.cardTextlow}>Sun Mon Tue Wed Thu Fri Sat</Text>
-              </View>
-            </View>
+      <SafeAreaView style={[styles.container, AndroidSafeView.AndroidSafeArea]}>
+      <View style={[{ width: screenWidth }, styles.container]}>
+        <View style={{ position: "absolute", top: 0 }}>
+          <Header headerTitle="   Jadwal Pakan" />
+        </View>
 
-            <View style={styles.column2}>
-          <View style={styles.row2}>
-            <View style={[styles.card2]}>
-            <Pressable style={styles.addButton}>
-                <Ionicons name="add" size={40} color="blue" />
-              </Pressable>
-            </View>
+        <StatusBar style="auto" />
 
+        <View style={{ position: "absolute", bottom: 0 }}>
+          <Navbar whichPage="home" />
+        </View>
+
+        <View style={styles.column}>
+          <View style={styles.card}>
+            <Text style={styles.cardValue}> 09 : 41</Text>
+          </View>
+          <View style={[styles.card, styles.lowerCard]}>
+            <Text style={styles.cardTextlow}>Sun Mon Tue Wed Thu Fri Sat</Text>
           </View>
         </View>
 
-
-
+        <View style={styles.column2}>
+          <View style={styles.row2}>
+            <View style={styles.card2}>
+              <Pressable style={styles.addButton} onPress={() => console.log('Tombol tambah ditekan')}>
+                <Ionicons name="add" size={80} color="#5FD3F7" />
+              </Pressable>
+            </View>
           </View>
-        </SafeAreaView>
+        </View>
+
+      </View>
+    </SafeAreaView>
       );
     };
     
@@ -60,6 +57,11 @@ const alarm = ({ navigation }) => {
         position: 'absolute',
         top: 100,
         left: 10,
+        marginTop:30,
+      },
+      column2: {
+
+        marginTop:55,
       },
       card: {
         width: 200,
