@@ -12,6 +12,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
+
+      <Stack.Screen
+              name="beranda"
+              component={beranda}
+              options={{ headerShown: false}}
+          /> 
+
+
+          
       <Stack.Screen
               name="alarm"
               component={alarm}
@@ -20,11 +30,7 @@ export default function App() {
  
 
 
-        <Stack.Screen
-              name="beranda"
-              component={beranda}
-              options={{ headerShown: false}}
-          />    
+          
  
 
         <Stack.Screen

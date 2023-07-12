@@ -34,10 +34,12 @@ const Beranda = ({ navigation }) => {
             <View style={[styles.card, styles.lowerCard]}>
                 <Text style={styles.cardTextlow}>Status pH normal</Text>
             </View>
+            
           </View>
         </View>
 
-        <View style={styles.column2}>
+
+        {/* <View style={styles.column2}>
           <View style={styles.row2}>
             <View style={[styles.card, styles.upperCard]}>
                 <Text style={styles.cardText}>O2</Text>
@@ -48,9 +50,11 @@ const Beranda = ({ navigation }) => {
                 <Text style={styles.cardTextlow}>Status Oksigen normal</Text>
             </View>
           </View>
-        </View>
+        </View> */}
+
 
         </View>
+
 
 
         <View style={styles.row1}>
@@ -79,6 +83,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#ECF0FB',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  column:{
+    marginLeft:25
+  },
+  column2:{
+    marginRight:50
   },
 
   row1: {
